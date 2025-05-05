@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('expediteur_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('destinataire_id')->nullable()->constrained('users')->onDelete('cascade');
             //$table->foreignId('conversation_id')->nullable()->constrained('conversations')->onDelete('cascade');
-            $table->date('date_heure')->useCurrent();
+            $table->timestamp('date_heure')->useCurrent();
             $table->text('message');
             $table->boolean('lu')->default(false);
             $table->timestamp('created_at')->useCurrent();
