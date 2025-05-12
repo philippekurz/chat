@@ -10,7 +10,11 @@ class HomeController extends Controller
 {
     public function index() : View
     {
-        // This is the home page of the application
+        return view('welcome');
+
+
+        // Récupère tous les messages dans la varaible $messages
+        // et les ordonne par date_heure croissante
         $messages = Message::query()
         ->orderBy('date_heure', 'asc')
         ->get();

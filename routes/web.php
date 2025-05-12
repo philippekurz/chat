@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+//Route Racine du site
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/dashboard', function () {
