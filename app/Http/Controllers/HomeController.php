@@ -21,4 +21,14 @@ class HomeController extends Controller
         //return view('home');
         return view('home', compact('messages'));
     }
+
+    public function a_propos() : View
+    {
+        return view('a-propos');
+    }
+
+    public function contact() : View
+    {
+        return view('contact');
+    }
 }

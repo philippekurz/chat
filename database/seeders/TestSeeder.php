@@ -14,10 +14,17 @@ class TestSeeder extends Seeder
     public function run(): void
     {
         Test::create([
-            'name' => 'name',
-            'description' => 'description',
-        ]); 
-        
+            'name' => 'Lzjh isdi hdf ',
+        ]);
+
+        Test::create([
+            'name' => 'AZhqbduhb isdi hdf ',
+        ]);
+
+        Test::create([
+            'name' => 'Dshbdv isdi hdf ',
+        ]);
+
         Test::factory(100)->create();
     }
 }

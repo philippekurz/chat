@@ -14,11 +14,10 @@ class TestFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition() : array
     {
         return [
-            'name' => Str::random(10),
-            'description' => Str::random(10),
+            'name' => fake()->firstName() . ' ' . fake()->lastName,
         ];
     }
 }
