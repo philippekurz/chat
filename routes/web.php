@@ -8,11 +8,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/a-propos', [HomeController::class, 'a_propos']);
 Route::get('/contact', [HomeController::class, 'contact']);
-
+// Routes pour les messages
+Route::get('/messages', [HomeController::class, 'messages']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

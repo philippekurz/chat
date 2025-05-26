@@ -10,15 +10,13 @@ class HomeController extends Controller
 {
     public function index() : View
     {
-        return view('welcome');
-
 
         // Récupère tous les messages dans la varaible $messages
         // et les ordonne par date_heure croissante
         $messages = Message::query()
         ->orderBy('date_heure', 'asc')
         ->get();
-        //return view('home');
+
         return view('home', compact('messages'));
     }
 
@@ -30,5 +28,14 @@ class HomeController extends Controller
     public function contact() : View
     {
         return view('contact');
+    }
+
+    public function messages() 
+    {
+        $messages = Message::query()
+        ->orderBy('date_heure', 'asc')
+        ->get();
+
+        return response()->json($messages);
     }
 }
