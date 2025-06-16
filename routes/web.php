@@ -8,8 +8,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/a-propos', [HomeController::class, 'a_propos']);
 Route::get('/contact', [HomeController::class, 'contact']);
+
 // Routes pour les messages
 Route::get('/messages', [HomeController::class, 'messages']);
+Route::post('/messages', [HomeController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
