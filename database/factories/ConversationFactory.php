@@ -18,8 +18,6 @@ class ConversationFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence,
-            'created_at' => $this->faker->dateTime,
-            'updated_at' => $this->faker->dateTime,
             'creator_id' => $this->faker->numberBetween(1, 10),
             'interlocuteur1_id' => $this->faker->numberBetween(1, 10),
             'interlocuteur2_id' => $this->faker->numberBetween(1, 10),
